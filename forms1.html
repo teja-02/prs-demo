@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- External Stylesheet-->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!-- <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet"> -->
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@1,300&family=Roboto+Slab&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.min.css">
+    
+    <title>Forms - Plant Recommendation</title>
+    
+    <script src="validationtry.js"></script>
+    
+  </head>
+  <body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	  <div class="boxed-page">
+		    <nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+             <span class="lnr lnr-leaf"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="lnr lnr-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-nav-header">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Back to Home</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+       </nav>
+       <br>
+  
+      <div class="container text-center">
+      <h2 style="text-align:center; margin: 100px; color: black">
+        <b>Find out the most suitable crop to grow in your area</b></h2>
+      </div>
+    <div class= "align-items-center" style="background-color: white;"></div>
+    <form class="form-box-style" id="predictionform" method="post">
+        <div class="form-group fields field1">
+            <label for="Nitrogen">Nitrogen(mg/kg)</label>
+            <input type="number"  class="form-control" id="Nitrogen" placeholder="Enter the Value">
+        </div>
+        <div class="form-group fields">
+            <label for="Phosphorous">Phosphorous(mg/kg)</label>
+            <input type="number" class="form-control" id="Phosphorous" placeholder="Enter the Value">
+        </div>
+        <div class="form-group fields">
+            <label for="Pottasium">Pottasium(mg/kg)</label>
+            <input type="number" class="form-control" id="Pottasium" placeholder="Enter the Value">
+        </div>
+        <div class="form-group fields">
+            <label for="phvalue">pH value</label>
+            <input type="number" class="form-control" id="phvalue" placeholder="Enter the Value">
+        </div>
+        <div class="form-group fields">
+            <label for="Districts">Districts</label>
+            <select class="custom-select" style="width: 725px; height: 40px;" id="district">
+              <option selected>Select District</option>
+              <option>Ariyalur</option> 
+              <option>Chennai</option> 
+              <option>Chengalpattu</option>
+              <option>Coimbatore</option> 
+              <option>Cuddalore</option> 
+              <option>Dharmapuri</option>> 
+              <option>Dindigul</option> 
+              <option>Erode</option> 
+              <option>Kancheepuram</option> 
+              <option>Kanyakumari</option> 
+              <option>Karur</option>
+              <option>Kallakurichi</option>
+              <option>Kollimalai</option> 
+              <option>Krishnagiri</option> 
+              <option>Madurai</option> 
+              <option>Mayiladuthurai</option>
+              <option>Nagapattinam</option> 
+              <option>Namakkal</option> 
+              <option>Nilgiris</option> 
+              <option>Perambalur</option> 
+              <option>Pudukottai</option> 
+              <option>Ramanathapuram</option> 
+              <option>Ranipet</option>
+              <option>Salem</option> 
+              <option>Sivagangai</option> 
+              <option>Tenkasi</option>
+              <option>Thanjavur</option> 
+              <option>Theni</option> 
+              <option>Thiruvallur</option> 
+              <option>Thiruvarur</option> 
+              <option>Thoothukudi</option> 
+              <option>Trichy</option> 
+              <option>Tirupattur</option>
+              <option>Tiruppur</option> 
+              <option>Tirunelveli</option> 
+              <option>Tiruvannamalai</option> 
+              <option>Vellore</option> 
+              <option>Viluppuram</option> 
+              <option>Virudhunagar</option>
+            </select>
+        </div>
+          <br>
+        <div>
+            <center><button type="button" id="btn" class="btn btn-secondary btn-green" onclick="covertNumbertoRatio();">SUBMIT</button></center>
+        </div>
+          <br>
+          <!-- <center>
+            <select id="plantres" class="custom-select" style="width: 400px; height: 40px;">
+              <option>CHOOSE A PLANT FROM SUGGESTION</option>
+            </select></form>
+          </center>
+          <br>
+          <div>
+            <center><button type="button" class="btn btn-secondary btn-green" onclick="getOption();">DETAILS ABOUT PLANT</button></center>
+        </div>
+        <br><br> -->
+          
+    </form>
+    <!--FOOTER SECTION-->	
+    <footer class="mastfoot mb-3 bg-white py-4 border-top">
+      <div class="inner container">
+        <div class="row"> <!--COPYRIGHT SECTION-->
+            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
+                <p class="mb-0">&copy; 2021 LMES . All Right Reserved. Design by LMES.</p>
+            </div>
+          
+            <div class="col-md-6"> <!--icons -->
+                <nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
+                   <a class="nav-link" href="#">
+                       <i class="icon-facebook"></i>
+                   </a>
+                   <a class="nav-link" href="#">
+                       <i class="icon-twitter"></i>
+                   </a>
+                   <a class="nav-link" href="#">
+                       <i class="icon-instagram"></i>
+                   </a>
+                   <a class="nav-link" href="#">
+                       <i class="icon-linkedin"></i>
+                   </a>
+                   <a class="nav-link" href="#">
+                       <i class="icon-youtube"></i>
+                   </a>
+                   <a class="nav-link" href="#">
+                       <i class="icon-pinterest"></i>
+                   </a>
+                </nav>
+            </div>
+          </div>
+       </div> 
+    </footer> 
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>     -->
+    <!-- <script src="validation.js"></script> -->
+    <!-- <script src="validationtry.js"></script> -->
+</body>
+
+</html>
